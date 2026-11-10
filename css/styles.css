@@ -1,0 +1,16 @@
+/* Estilos personalizados de Aprende + */
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; padding-bottom: env(safe-area-inset-bottom, 0px); }
+iframe { max-width: 100%; }
+/* Botones cómodos para tocar en celulares y tablets */
+@media (pointer: coarse) { button, a { min-height: 40px; } }
+/* Tabla del reporte: en celular cada fila se muestra como una tarjeta */
+@media (max-width: 640px) {
+    #report-table thead { display: none; }
+    #report-table, #report-table tbody, #report-table tr, #report-table td { display: block; width: 100%; }
+    #report-table tr { border-bottom: 10px solid #f4f6f8; padding: 6px 0; }
+    #report-table td { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 6px 16px; text-align: right; white-space: normal; }
+    #report-table td::before { content: attr(data-label); font-weight: 600; color: #374151; text-align: left; flex-shrink: 0; }
+    #report-table td[colspan] { justify-content: center; }
+}
+.exam-banner { background-color:#122e65; background-image:url(../assets/images/exam-banner.png); background-repeat:no-repeat; background-size:cover; background-position:left center; }
